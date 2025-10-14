@@ -1,0 +1,4 @@
+/home/vboxuser/Desktop/STL/build/CMakeFiles/app.dir
+/home/vboxuser/Desktop/STL/build/CMakeFiles/test.dir
+/home/vboxuser/Desktop/STL/build/CMakeFiles/edit_cache.dir
+/home/vboxuser/Desktop/STL/build/CMakeFiles/rebuild_cache.dir
