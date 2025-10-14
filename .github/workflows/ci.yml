@@ -6,18 +6,17 @@ on:
   pull_request:
     branches: [ main ]
 
+
 jobs:
   build:
+    runs-on: ubuntu-latest
 
 
-      runs-on: ubuntu-latest
-
-
-      steps:
+    steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Cmake
+      - name: Set up CMake
         uses: jwlawson/actions-setup-cmake@v2
 
       - name: Build project
