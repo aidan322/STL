@@ -1,0 +1,30 @@
+name: CMake Build and Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+
+      runs-on: ubuntu-latest
+
+
+      steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Cmake
+        uses: jwlawson/actions-setup-cmake@v2
+
+      - name: Build project
+        run: |
+          cmake -B build -S .
+          cmake --build build
+
+      - name: Run tests
+        run: |
+          ./build/test
