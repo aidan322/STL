@@ -1,4 +1,5 @@
 #include "CircularList.h"
+#include <iostream>
 
 int main() {
     CircularList<int> list;
@@ -6,7 +7,7 @@ int main() {
     list.push_back(2);
     list.push_back(3);
 
-    list.print();
+    std::cout << list << std::endl;
 
     return 0;
 }
