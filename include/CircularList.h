@@ -32,8 +32,6 @@ public:
         swap(other);
         return *this;
     }
-    template <typename U>
-    friend std::ostream& operator<<(std::ostream&, const CircularList<U>&);
     ~CircularList() { clear(); }
 
     // basic ops
@@ -201,18 +199,4 @@ private:
         }
         ++size_;
     }
-
 };
-
-
-
-template <typename T>
-std::ostream& operator<<(std::ostream& os, const CircularList<T>& list) {
-    if (!list.head) return os;
-    auto current = list.head;
-    do {
-        os << current->data << " ";
-        current = current->next;
-    } while (current != list.head);
-    return os;
-}
