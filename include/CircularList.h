@@ -200,3 +200,21 @@ private:
         ++size_;
     }
 };
+
+template <typename T>
+std::ostream& operator<<(std::ostream& os, const CircularList<T>& list) {
+    os << "[";
+    if (!list.empty()) {
+        auto current = list.begin();
+        auto end = list.end();
+        bool first = true;
+        for(auto it = current; it != end; ++it) {
+            if(!first)
+                os << ", ";
+            first = false;
+            os << *it;
+        }
+    }
+    os << "]";
+    return os;
+}
